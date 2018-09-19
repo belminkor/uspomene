@@ -1,0 +1,73 @@
+// Poruke za mail + eventualne modifikacije
+
+export const msg = {
+  accepted: (memID) => {
+  	return `<h1>Vaša zahtjev je primljen i obrađuje se br: ${memID}</h1>`
+  },
+  declined: (memID) => {
+  	return `<!DOCTYPE html>
+  			<html>
+  			<head></head>
+  			<body>
+  				<h1>Vas zahtjve je `
+  },
+  approved: `<!DOCTYPE html>
+  			<html>
+  			<head></head>
+  			<body>
+  				<h1>Vas zahtjev je odobren</h1>
+  			</body>
+  			</html>`,
+  paymentSlip: (memId) => {
+  	return `<!DOCTYPE html>
+  			<html>
+  			<head></head>
+  			<body>
+  				<h1>Vas zahtjev je u obradi</h1>
+  				<p>Molimo Vas da izvrsite uplatu na br. racuna: xxx,
+  					<br/>
+  					u iznosu od xxx.
+  				</p>
+  				<br>
+  				<p>Zatim nas kontaktirajte na broj: xxx ili email: info@uspomene.ba </p>
+  			</body>
+  			</html>`
+  },
+  paypal:(memID,paypalID) => {
+  	return `<!DOCTYPE html>
+  			<html>
+  			<head></head>
+  			<body>
+  				<h1>PayPal uplata</h1>
+  				<p>Br. narudžbe: ${memID},<br/>PayPal ID: ${paypalID}</p>
+  			</body>
+  			</html>`
+  },
+  cronMsg:(memID,paypalID) => {
+  	return `<!DOCTYPE html>
+  			<html>
+  			<head></head>
+  			<body>
+  				<h1>Obavijest o vasoj narudžbi</h1>
+  				<p>Vaša premium usluga ističe za 7 dana</p>
+  			</body>
+  			</html>`
+  },
+  payLater: `<!DOCTYPE html>
+  			<html>
+  			<head></head>
+  			<body>
+  				<h1>Vaša zahtjev je primljen i obrađuje,uskoro ce te bit kontaktirani</h1>
+  			</body>
+  			</html>`,
+  payLaterAdmin: (memID) => {
+  	return `<!DOCTYPE html>
+  			<html>
+  			<head></head>
+  			<body>
+  				<h1>Pristiglan narudžba sa naznakom plati kasnije</h1>
+  				<p>broj narudžbe: ${memID}</p>
+  			</body>
+  			</html>`
+  	}
+};
