@@ -6,7 +6,7 @@ import config from '../config';
 import { getToken } from '../util/getToken';
 
 const alg = 'sha512';
-const pass = 'd434fgsdfjebise';
+const pass = 'd434fgsdfnesto';
 
 function hash(text) {
   const password = crypto.createHmac(alg, pass);
